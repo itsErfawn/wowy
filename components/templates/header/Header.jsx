@@ -5,46 +5,6 @@ function Header() {
   return (
     <>
     <header className="header-area header-height-2">
-    <div className="header-top header-top-ptb-1 d-none d-lg-block">
-        <div className="container">
-            <div className="row align-items-center">
-                <div className="col-xl-3 col-lg-4">
-                    <div className="header-info">
-                        <ul>
-                            <li><Link href="#">(+01) - 2345 - 6789</Link></li>
-                            <li><i className="fa fa-map-marker-alt mr-5"></i><Link target="_blank" href="page-location.html">موقعیت ما</Link></li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="col-xl-6 col-lg-4">
-                    <div className="text-center">
-                        <div id="news-flash" className="d-inline-block">
-                            <ul>
-                                <li><i className="fa fa-angle-double-right mr-5"></i> دستگاه‌های عالی با تخفیف تا ۵۰٪ <Link className="active" href="shop-grid-right.html">مشاهده جزئیات</Link></li>
-                                <li><i className="fa fa-asterisk mr-5"></i><b className="text-danger">تخفیف‌های ویژه</b> - با کوپن‌ها بیشتر صرفه‌جویی کنید</li>
-                                <li><i className="fa fa-bell mr-5"></i> <b className="text-success"> ترندی ۲۵</b> جواهرات نقره‌ای، امروز تا ۳۵٪ تخفیف <Link href="shop-grid-right.html">همین حالا خرید کنید</Link></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-xl-3 col-lg-4">
-                    <div className="header-info header-info-right">
-                        <ul>
-                            <li>
-                                <Link className="language-dropdown-active" href="#"> <i className="fa fa-globe-americas"></i> فارسی <i className="fa fa-chevron-down"></i></Link>
-                                <ul className="language-dropdown">
-                                    <li><Link href="#">فرانسوی</Link></li>
-                                    <li><Link href="#">آلمانی</Link></li>
-                                    <li><Link href="#">روسی</Link></li>
-                                </ul>
-                            </li>
-                            <li><Link href="page-login-register.html">ورود / ثبت نام</Link></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div className="header-middle header-middle-ptb-1 d-none d-lg-block">
         <div className="container">
             <div className="header-wrap header-space-between">
@@ -73,13 +33,13 @@ function Header() {
                 <div className="header-action-right">
                     <div className="header-action-2">
                         <div className="header-action-icon-2">
-                            <Link href="shop-wishlist.html">
+                            <Link href="/wishlist">
                                 <img className="svgInject" alt="wowy" src="/imgs/theme/icons/icon-heart.svg" />
                                 <span className="pro-count blue">4</span>
                             </Link>
                         </div>
                         <div className="header-action-icon-2">
-                            <Link className="mini-cart-icon" href="shop-cart.html">
+                            <Link className="mini-cart-icon" href="/cart">
                                 <img alt="wowy" src="/imgs/theme/icons/icon-cart.svg" />
                                 <span className="pro-count blue">2</span>
                             </Link>
@@ -115,14 +75,14 @@ function Header() {
                                         <h4>جمع کل <span>۴۰۰۰,۰۰۰ تومان</span></h4>
                                     </div>
                                     <div className="shopping-cart-button">
-                                        <Link href="shop-cart.html"> سبد خرید</Link>
-                                        <Link href="shop-checkout.html">تسویه</Link>
+                                        <Link href="/cart"> سبد خرید</Link>
+                                        <Link href="/checkout">تسویه</Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="header-action-icon-2">
-                            <Link href="page-login-register.html">
+                            <Link href="/account">
                                 <img alt="wowy" src="/imgs/theme/icons/icon-user.svg"/>
                             </Link>
                         </div>
@@ -342,16 +302,16 @@ function Header() {
                     <nav>
                         <ul>
                             <li>
-                                <Link href="page-about.html">درباره ما</Link>
+                                <Link href="/about">درباره ما</Link>
                             </li>
                             <li>
                                 <Link href="/blogs">مقالات</Link>
                             </li>
-                            <li><Link href="page-purchase-guide.html">راهنمای خرید</Link></li>
-                            <li><Link href="page-privacy-policy.html">سیاست حفظ حریم خصوصی</Link></li>
-                            <li><Link href="page-terms.html">شرایط خدمات</Link></li>
+                            <li><Link href="/purchase-guide">راهنمای خرید</Link></li>
+                            <li><Link href="/privacy-policy">سیاست حفظ حریم خصوصی</Link></li>
+                            <li><Link href="/terms">شرایط خدمات</Link></li>
                             <li>
-                                <Link href="page-contact.html">تماس با ما</Link>
+                                <Link href="/contact">تماس با ما</Link>
                             </li>
                         </ul>
                     </nav>
@@ -362,13 +322,13 @@ function Header() {
                 <div className="header-action-right d-block d-lg-none">
                     <div className="header-action-2">
                         <div className="header-action-icon-2">
-                            <Link href="shop-wishlist.html">
+                            <Link href="/wishlist">
                                 <img alt="wowy" src="/imgs/theme/icons/icon-heart-white.svg"/>
                                 <span className="pro-count white">4</span>
                             </Link>
                         </div>
                         <div className="header-action-icon-2">
-                            <Link className="mini-cart-icon" href="shop-cart.html">
+                            <Link className="mini-cart-icon" href="/cart">
                                 <img alt="wowy" src="/imgs/theme/icons/icon-cart-white.svg"/>
                                 <span className="pro-count white">02</span>
                             </Link>
@@ -404,14 +364,14 @@ function Header() {
                                         <h4>جمع کل <span>383,000 تومان</span></h4>
                                     </div>
                                     <div className="shopping-cart-button">
-                                        <Link href="shop-cart.html"> سبد خرید</Link>
-                                        <Link href="shop-checkout.html">تسویه</Link>
+                                        <Link href="/cart"> سبد خرید</Link>
+                                        <Link href="/checkout">تسویه</Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="header-action-icon-2">
-                            <Link href="page-login-register.html">
+                            <Link href="/account">
                                 <img alt="wowy" src="/imgs/theme/icons/icon-user-white.svg"/>
                             </Link>
                         </div>
@@ -487,45 +447,15 @@ function Header() {
                         <nav>
                             <ul className="mobile-menu">
                                 <li className=""><Link href={'/blog'}>وبلاگ</Link></li>
-
-                                <li className="menu-item-has-children">
-                                    <span className="menu-expand"></span><Link href="#">صفحات</Link>
-                                    <ul className="dropdown">
-                                        <li><Link href="page-about.html">درباره ما</Link></li>
-                                        <li><Link href="page-contact.html">تماس</Link></li>
-                                        <li><Link href="page-account.html">حساب من</Link></li>
-                                        <li><Link href="page-login-register.html">ورود/ثبت‌نام</Link></li>
-                                        <li><Link href="page-purchase-guide.html">راهنمای خرید</Link></li>
-                                        <li><Link href="page-privacy-policy.html">سیاست حفظ حریم خصوصی</Link></li>
-                                        <li><Link href="page-terms.html">شرایط خدمات</Link></li>
-                                        <li><Link href="page-404.html">صفحه ۴۰۴</Link></li>
-                                    </ul>
-                                </li>
+                                <li><Link href="/about">درباره ما</Link></li>
+                                <li><Link href="/contact">تماس</Link></li>
+                                <li><Link href="/account">حساب من</Link></li>
+                                <li><Link href="/purchase-guide">راهنمای خرید</Link></li>
+                                <li><Link href="/privacy-policy">سیاست حفظ حریم خصوصی</Link></li>
+                                <li><Link href="/terms">شرایط خدمات</Link></li>
                             </ul>
                         </nav>
                         {/* <!-- mobile menu end --> */}
-                    </div>
-                    <div className="mobile-header-info-wrap mobile-header-border">
-                        <div className="single-mobile-header-info">
-                            <Link className="mobile-language-active" href="#">زبان <span><i className="far fa-angle-down"></i></span></Link>
-                            <div className="lang-curr-dropdown lang-dropdown-active">
-                                <ul>
-                                    <li><Link href="#">انگلیسی</Link></li>
-                                    <li><Link href="#">فرانسوی</Link></li>
-                                    <li><Link href="#">آلمانی</Link></li>
-                                    <li><Link href="#">اسپانیایی</Link></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="single-mobile-header-info mt-30">
-                            <Link target="_blank" href="page-location.html"> موقعیت ما </Link>
-                        </div>
-                        <div className="single-mobile-header-info">
-                            <Link href="page-login-register.html">ورود / ثبت‌نام </Link>
-                        </div>
-                        <div className="single-mobile-header-info">
-                            <Link href="#">(+01) - 2345 - 6789 </Link>
-                        </div>
                     </div>
                     <div className="mobile-social-icon">
                         <Link className="facebook" href="#">

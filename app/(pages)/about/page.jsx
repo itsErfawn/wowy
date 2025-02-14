@@ -1,5 +1,8 @@
+import PartenrSliderWrapper from '@/components/templates/about/partenrs/PartenrSliderWrapper';
 import React from 'react'
-
+export const metadata = {
+    title: "درباره ما",
+  };
 function aboutPage() {
   return (
     <>
@@ -409,43 +412,7 @@ function aboutPage() {
             </div>
         </div>
     </section>
-    <section id="clients" className="pt-50 pb-50 bg-brand-muted bg-grey-9">
-        <div className=" mb-30">
-            <div className=" text-center">
-                <h6 className="mt-0 mb-5 text-uppercase font-sm text-brand wow fadeIn animated">مورد اعتماد بیش از ۵۰.۰۰۰ کاربر</h6>
-                <h2 className="mb-5 text-grey-1 wow fadeIn animated">شرکای ما</h2>
-                <p className="w-50 m-auto font-sm text-grey-3 wow fadeIn animated">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.</p>
-            </div>
-        </div>
-        <div className="container">
-            <div className="carausel-6-columns-cover arrow-center position-relative wow fadeIn animated">
-                <div className="slider-arrow slider-arrow-3 carausel-6-columns-arrow" id="carausel-6-columns-3-arrows"></div>
-                <div className="carausel-6-columns text-center" id="carausel-6-columns-3">
-                    <div className="brand-logo">
-                        <img className="img-grey-hover" src="/imgs/banner/brand-1.png" alt=""/>
-                    </div>
-                    <div className="brand-logo">
-                        <img className="img-grey-hover" src="/imgs/banner/brand-2.png" alt=""/>
-                    </div>
-                    <div className="brand-logo">
-                        <img className="img-grey-hover" src="/imgs/banner/brand-3.png" alt=""/>
-                    </div>
-                    <div className="brand-logo">
-                        <img className="img-grey-hover" src="/imgs/banner/brand-4.png" alt=""/>
-                    </div>
-                    <div className="brand-logo">
-                        <img className="img-grey-hover" src="/imgs/banner/brand-5.png" alt=""/>
-                    </div>
-                    <div className="brand-logo">
-                        <img className="img-grey-hover" src="/imgs/banner/brand-6.png" alt=""/>
-                    </div>
-                    <div className="brand-logo">
-                        <img className="img-grey-hover" src="/imgs/banner/brand-3.png" alt=""/>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <PartenrSliderWrapper/>
 </>
   )
 }

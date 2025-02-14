@@ -111,10 +111,10 @@ function Footer() {
                 <div className="footer-bottom"></div>
             </div>
             <div className="col-lg-6">
-                <p className="float-md-left font-sm text-muted mb-0">&copy; 2024, <strong className="text-brand">Wowy</strong> - قالب HTML فروشگاهی</p>
+                <p className="float-md-left font-sm text-muted mb-0">&copy; 2024, <strong className="text-brand">Wowy</strong> - فروشگاه</p>
             </div>
             <div className="col-lg-6">
-                <p className="text-lg-end text-start font-sm text-muted mb-0">طراحی شده توسط محمد عموئی. کلیه حقوق محفوظ است.</p>
+                <p className="text-lg-end text-start font-sm text-muted mb-0">طراحی شده توسط عرفان صفاری. کلیه حقوق محفوظ است.</p>
             </div>
         </div>
     </div>

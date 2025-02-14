@@ -1,5 +1,5 @@
 (function ($) {
-    "use strict";
+    // "use strict";
     // Page loading
     $(window).on('load', function() {
         $('#preloader-active').delay(450).fadeOut('slow');
@@ -56,103 +56,6 @@
     }
   
 
-    /*------ Hero slider 1 ----*/
-    $('.hero-slider-1').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        fade: true,
-        loop: true,
-        dots: true,
-        rtl: true,
-        arrows: true,
-        prevArrow: '<span class="slider-btn slider-prev"><i class="far fa-chevron-right"></i></span>',
-        nextArrow: '<span class="slider-btn slider-next"><i class="far fa-chevron-left"></i></span>',
-        appendArrows: '.hero-slider-1-arrow',
-    });
-
-    /*Carausel 6 columns*/
-    $(".carausel-6-columns").each(function(key, item) {
-        var id=$(this).attr("id");
-        var sliderID='#'+id;
-        var appendArrowsClassName = '#'+id+'-arrows'
-
-        $(sliderID).slick({
-            dots: false,
-            infinite: true,
-            speed: 1000,
-            arrows: true,
-            autoplay: false,
-            slidesToShow: 6,
-            slidesToScroll: 1,
-            loop: true,
-            rtl: true,
-            adaptiveHeight: true,
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 4,
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ],
-            prevArrow: '<span class="slider-btn slider-prev"><i class="far fa-chevron-left"></i></span>',
-            nextArrow: '<span class="slider-btn slider-next"><i class="far fa-chevron-right"></i></span>',
-            appendArrows:  (appendArrowsClassName),
-        });
-    });
-
-    /*Carausel 4 columns*/
-    $(".carausel-4-columns").each(function(key, item) {
-        var id=$(this).attr("id");
-        var sliderID='#'+id;
-        var appendArrowsClassName = '#'+id+'-arrows'
-
-        $(sliderID).slick({
-            dots: false,
-            infinite: true,
-            speed: 1000,
-            arrows: true,
-            autoplay: false,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            loop: true,
-            rtl: true,
-            adaptiveHeight: true,
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ],
-            prevArrow: '<span class="slider-btn slider-prev"><i class="far fa-chevron-right"></i></span>',
-            nextArrow: '<span class="slider-btn slider-next"><i class="far fa-chevron-left"></i></span>',
-            appendArrows:  (appendArrowsClassName),
-        });
-    });
-
-    /*Fix Bootstrap 5 tab & slick slider*/
-
-    $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
-		$('.carausel-4-columns').slick('setPosition');
-	});
 
      /*------ Timer Countdown ----*/
 
