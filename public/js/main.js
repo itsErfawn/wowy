@@ -34,11 +34,6 @@
     /*------ Wow Active ----*/
     new WOW().init();  
 
-    //sidebar sticky
-    if ($('.sticky-sidebar').length) { 
-        $('.sticky-sidebar').theiaStickySidebar();
-    }
-
     // Slider Range JS
  
     if ( $("#slider-range").length ) {
