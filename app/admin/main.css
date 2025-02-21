@@ -4311,3 +4311,19 @@ body.dark .dropdown-menu .dropdown-item.text-danger {
   }
 }
 /*# sourceMappingURL=main.css.map */
+.login_form_sec{
+  display: flex
+  ;
+      align-items: center;
+      justify-content: center;
+}
+.login_form{
+  margin: 0 !important;
+  width: 100%;
+}
+.btn_sbumit{
+  padding: 8px 20px !important;
+  display: block !important;
+  border-radius: 4px !important;
+  margin: 0 10px !important;
+}

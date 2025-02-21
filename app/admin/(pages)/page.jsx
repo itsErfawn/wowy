@@ -1,6 +1,9 @@
+import adminBootstrap from '@/Bootstrap/admin-bootstrap'
 import React from 'react'
 
-function adminHome() {
+async function adminHome() {
+    const adminData= await adminBootstrap.home()
+    
   return (
     <>
         
