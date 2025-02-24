@@ -1,4 +1,3 @@
-import './main.css'
 export const metadata = {
   title: "واوی",
 };

@@ -1,27 +1,10 @@
 (function ($) {
     // "use strict";
     // Page loading
-    $(window).on('load', function() {
-        $('#preloader-active').delay(450).fadeOut('slow');
-        $('body').delay(450).css({
-            'overflow': 'visible'
-        });
-    });
     /*-----------------
         Menu Stick
     -----------------*/
-    var header = $('.sticky-bar');
-    var win = $(window);
-    win.on('scroll', function() {
-        var scroll = win.scrollTop();
-        if (scroll < 200) {
-            header.removeClass('stick');
-            $('.header-style-2 .categori-dropdown-active-large').removeClass('open');
-            $('.header-style-2 .categori-button-active').removeClass('open');
-        } else {
-            header.addClass('stick');
-        }
-    });
+ 
     
     /*------ ScrollUp -------- */
     $.scrollUp({

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import './(pages)/main.css'
 export const metadata = {
   title: "صفحه پیدا نشد!",
 };

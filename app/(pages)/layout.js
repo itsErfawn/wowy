@@ -2,7 +2,7 @@ import Footer from "@/components/templates/footer/Footer";
 import Header from "@/components/templates/header/Header";
 import PreLoad from "@/components/templates/preLoad/PreLoad";
 import Script from "next/script";
-
+import './main.css'
 export default function pageLayout({ children }) {
   return (
       <>
