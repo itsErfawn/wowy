@@ -20,7 +20,7 @@ function AdminCategoryPageComponent({category}) {
         <div className="card-body">
             <div className="row">
                 <AdminCategoryForm {...{setCategories,categories}} />
-                <AdminCategories {...{categories}}/>
+                <AdminCategories {...{categories,setCategories}}/>
             </div> 
         </div> 
     </div>

@@ -1,3 +1,4 @@
+import bootStrap from '@/Bootstrap/bootstrap'
 import BestSellers from '@/components/templates/home/bestSellers/BestSellers'
 import Brands from '@/components/templates/home/brands/Brands'
 import HomeSlider from '@/components/templates/home/homeSlider/HomeSlider'
@@ -6,7 +7,8 @@ import PopularCategories from '@/components/templates/home/popularCategories/Pop
 import Link from 'next/link'
 import React from 'react'
 
-function Home() {
+async function Home() {
+    const data= await bootStrap.home()
   return (
     <>
             <HomeSlider/>
@@ -60,7 +62,7 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <PopularCategories/>
+            <PopularCategories {...{categories:data.categories}} />
             <section className="banners pt-60">
                 <div className="container">
                     <div className="row">
@@ -118,7 +120,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="default-img" src="/imgs/shop/product-2-1.jpg" alt=""/>
                                                     <img className="hover-img" src="/imgs/shop/product-2-2.jpg" alt=""/>
                                                 </Link >
@@ -136,7 +138,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">موسیقی</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">هدفون اولترا باس</Link ></h2>
+                                            <h2><Link href="/products/محصول">هدفون اولترا باس</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>90%</span>
@@ -156,7 +158,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="default-img" src="/imgs/shop/product-3-1.jpg" alt=""/>
                                                     <img className="hover-img" src="/imgs/shop/product-3-2.jpg" alt=""/>
                                                 </Link >
@@ -174,7 +176,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">موسیقی</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">بلندگوی هوشمند خانگی</Link ></h2>
+                                            <h2><Link href="/products/محصول">بلندگوی هوشمند خانگی</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>50%</span>
@@ -194,7 +196,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="default-img" src="/imgs/shop/product-7-1.jpg" alt=""/>
                                                     <img className="hover-img" src="/imgs/shop/product-7-2.jpg" alt=""/>
                                                 </Link >
@@ -212,7 +214,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">ساعت</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">اپل واچ سری ۷</Link ></h2>
+                                            <h2><Link href="/products/محصول">اپل واچ سری ۷</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>95%</span>
@@ -232,7 +234,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="default-img" src="/imgs/shop/product-1-2.jpg" alt=""/>
                                                     <img className="hover-img" src="/imgs/shop/product-1-3.jpg" alt=""/>
                                                 </Link >
@@ -250,7 +252,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">موسیقی</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">هدفون بلوتوثی باکس</Link ></h2>
+                                            <h2><Link href="/products/محصول">هدفون بلوتوثی باکس</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>70%</span>
@@ -270,7 +272,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="default-img" src="/imgs/shop/product-4-1.jpg" alt=""/>
                                                     <img className="hover-img" src="/imgs/shop/product-3-4.jpg" alt=""/>
                                                 </Link >
@@ -288,7 +290,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">بلندگو</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">بلندگوی بلوتوثی چیکی</Link ></h2>
+                                            <h2><Link href="/products/محصول">بلندگوی بلوتوثی چیکی</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>70%</span>
@@ -308,7 +310,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="default-img" src="/imgs/shop/product-5-2.jpg" alt=""/>
                                                     <img className="hover-img" src="/imgs/shop/product-5-3.jpg" alt=""/>
                                                 </Link >
@@ -326,7 +328,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">دوربین</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">دوربین هایک ویژن HK-35VS8</Link ></h2>
+                                            <h2><Link href="/products/محصول">دوربین هایک ویژن HK-35VS8</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>70%</span>
@@ -346,7 +348,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="default-img" src="/imgs/shop/product-8-2.jpg" alt=""/>
                                                     <img className="hover-img" src="/imgs/shop/product-8-1.jpg" alt=""/>
                                                 </Link >
@@ -364,7 +366,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">تلفن</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">اپل آیفون ۱۳ پلاس</Link ></h2>
+                                            <h2><Link href="/products/محصول">اپل آیفون ۱۳ پلاس</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>98%</span>
@@ -383,7 +385,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="default-img" src="/imgs/shop/product-11-1.jpg" alt=""/>
                                                     <img className="hover-img" src="/imgs/shop/product-11-2.jpg" alt=""/>
                                                 </Link >
@@ -398,7 +400,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">لوازم جانبی</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">بند ساعت چرمی</Link ></h2>
+                                            <h2><Link href="/products/محصول">بند ساعت چرمی</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>70%</span>
@@ -424,7 +426,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="default-img" src="/imgs/shop/product-3-3.jpg" alt=""/>
                                                     <img className="hover-img" src="/imgs/shop/product-3-2.jpg" alt=""/>
                                                 </Link >
@@ -442,7 +444,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">موسیقی</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">هدفون اولترا باس</Link ></h2>
+                                            <h2><Link href="/products/محصول">هدفون اولترا باس</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>90%</span>
@@ -462,7 +464,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="default-img" src="/imgs/shop/product-2-4.jpg" alt=""/>
                                                     <img className="hover-img" src="/imgs/shop/product-2-3.jpg" alt=""/>
                                                 </Link >
@@ -480,7 +482,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">موسیقی</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">بلندگوی هوشمند خانگی</Link ></h2>
+                                            <h2><Link href="/products/محصول">بلندگوی هوشمند خانگی</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>50%</span>
@@ -500,7 +502,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="default-img" src="/imgs/shop/product-7-2.jpg" alt=""/>
                                                     <img className="hover-img" src="/imgs/shop/product-7-1.jpg" alt=""/>
                                                 </Link >
@@ -518,7 +520,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">ساعت</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">اپل واچ سری ۷</Link ></h2>
+                                            <h2><Link href="/products/محصول">اپل واچ سری ۷</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>95%</span>
@@ -538,7 +540,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="default-img" src="/imgs/shop/product-1-3.jpg" alt=""/>
                                                     <img className="hover-img" src="/imgs/shop/product-1-2.jpg" alt=""/>
                                                 </Link >
@@ -556,7 +558,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">موسیقی</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">هدفون بلوتوثی باکس</Link ></h2>
+                                            <h2><Link href="/products/محصول">هدفون بلوتوثی باکس</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>70%</span>
@@ -576,7 +578,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="default-img" src="/imgs/shop/product-3-4.jpg" alt=""/>
                                                     <img className="hover-img" src="/imgs/shop/product-4-1.jpg" alt=""/>
                                                 </Link >
@@ -594,7 +596,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">بلندگو</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">بلندگوی بلوتوثی چیکی</Link ></h2>
+                                            <h2><Link href="/products/محصول">بلندگوی بلوتوثی چیکی</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>70%</span>
@@ -614,7 +616,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="default-img" src="/imgs/shop/product-9-1.jpg" alt=""/>
                                                     <img className="hover-img" src="/imgs/shop/product-9-2.jpg" alt=""/>
                                                 </Link >
@@ -632,7 +634,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">دوربین</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">دوربین هایک ویژن HK-35VS8</Link ></h2>
+                                            <h2><Link href="/products/محصول">دوربین هایک ویژن HK-35VS8</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>70%</span>
@@ -652,7 +654,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="default-img" src="/imgs/shop/product-10-2.jpg" alt=""/>
                                                     <img className="hover-img" src="/imgs/shop/product-12-1.jpg" alt=""/>
                                                 </Link >
@@ -670,7 +672,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">تلفن</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">اپل آیفون ۱۳ پلاس</Link ></h2>
+                                            <h2><Link href="/products/محصول">اپل آیفون ۱۳ پلاس</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>98%</span>
@@ -689,7 +691,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="default-img" src="/imgs/shop/product-7-2.jpg" alt=""/>
                                                     <img className="hover-img" src="/imgs/shop/product-7-1.jpg" alt=""/>
                                                 </Link >
@@ -704,7 +706,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">لوازم جانبی</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">بند ساعت چرمی</Link ></h2>
+                                            <h2><Link href="/products/محصول">بند ساعت چرمی</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>70%</span>
@@ -730,7 +732,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="default-img" src="/imgs/shop/product-15-2.jpg" alt=""/>
                                                     <img className="hover-img" src="/imgs/shop/product-15-1.jpg" alt=""/>
                                                 </Link >
@@ -748,7 +750,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">موسیقی</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">هدفون بیس قوی</Link ></h2>
+                                            <h2><Link href="/products/محصول">هدفون بیس قوی</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>90%</span>
@@ -768,7 +770,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="hover-img" src="/imgs/shop/product-13-1.jpg" alt=""/>
                                                     <img className="default-img" src="/imgs/shop/product-13-2.jpg" alt=""/>
                                                 </Link >
@@ -786,7 +788,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">موسیقی</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">بلندگوی هوشمند خانگی</Link ></h2>
+                                            <h2><Link href="/products/محصول">بلندگوی هوشمند خانگی</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>50%</span>
@@ -806,7 +808,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="hover-img" src="/imgs/shop/product-14-1.jpg" alt=""/>
                                                     <img className="default-img" src="/imgs/shop/product-14-2.jpg" alt=""/>
                                                 </Link >
@@ -824,7 +826,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">ساعت</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">اپل واچ سری ۷</Link ></h2>
+                                            <h2><Link href="/products/محصول">اپل واچ سری ۷</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>95%</span>
@@ -844,7 +846,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="hover-img" src="/imgs/shop/product-4-3.jpg" alt=""/>
                                                     <img className="default-img" src="/imgs/shop/product-4-4.jpg" alt=""/>
                                                 </Link >
@@ -862,7 +864,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">موسیقی</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">هدفون بلوتوثی باکس</Link ></h2>
+                                            <h2><Link href="/products/محصول">هدفون بلوتوثی باکس</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>70%</span>
@@ -882,7 +884,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="hover-img" src="/imgs/shop/product-5-4.jpg" alt=""/>
                                                     <img className="default-img" src="/imgs/shop/product-6-1.jpg" alt=""/>
                                                 </Link >
@@ -900,7 +902,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">بلندگو</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">چیکی - بلندگوی بلوتوثی</Link ></h2>
+                                            <h2><Link href="/products/محصول">چیکی - بلندگوی بلوتوثی</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>70%</span>
@@ -920,7 +922,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="hover-img" src="/imgs/shop/product-6-2.jpg" alt=""/>
                                                     <img className="default-img" src="/imgs/shop/product-5-1.jpg" alt=""/>
                                                 </Link >
@@ -938,7 +940,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">دوربین</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">دوربین هایک ویژن HK-35VS8</Link ></h2>
+                                            <h2><Link href="/products/محصول">دوربین هایک ویژن HK-35VS8</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>70%</span>
@@ -958,7 +960,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="hover-img" src="/imgs/shop/product-10-1.jpg" alt=""/>
                                                     <img className="default-img" src="/imgs/shop/product-10-2.jpg" alt=""/>
                                                 </Link >
@@ -976,7 +978,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">تلفن</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">اپل آیفون ۱۳ پلاس</Link ></h2>
+                                            <h2><Link href="/products/محصول">اپل آیفون ۱۳ پلاس</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>98%</span>
@@ -995,7 +997,7 @@ function Home() {
                                     <div className="product-cart-wrap mb-30">
                                         <div className="product-img-action-wrap">
                                             <div className="product-img product-img-zoom">
-                                                <Link href="shop-product-right.html">
+                                                <Link href="/products/محصول">
                                                     <img className="hover-img" src="/imgs/shop/product-2-1.jpg" alt=""/>
                                                     <img className="default-img" src="/imgs/shop/product-2-2.jpg" alt=""/>
                                                 </Link >
@@ -1010,7 +1012,7 @@ function Home() {
                                             <div className="product-category">
                                                 <Link href="shop-grid-right.html">لوازم جانبی</Link >
                                             </div>
-                                            <h2><Link href="shop-product-right.html">بند ساعت چرمی</Link ></h2>
+                                            <h2><Link href="/products/محصول">بند ساعت چرمی</Link ></h2>
                                             <div className="rating-result" title="90%">
                                                 <span>
                                                     <span>70%</span>
@@ -1057,7 +1059,7 @@ function Home() {
                                     <h5>محدودیت در تعداد</h5>
                                 </div>
                                 <div className="deal-content">
-                                    <h6 className="product-title"><Link href="shop-product-right.html">هدفون هوشمند با طراحی مدرن جدید</Link ></h6>
+                                    <h6 className="product-title"><Link href="/products/محصول">هدفون هوشمند با طراحی مدرن جدید</Link ></h6>
                                     <div className="product-price"><span className="new-price">۱۳۹,۰۰۰ تومان</span><span className="old-price">۱۶۰.۹۹</span></div>
                                 </div>
                                 <div className="deal-bottom">
@@ -1074,7 +1076,7 @@ function Home() {
                                     <h5>کامپیوتر و لپ‌تاپ</h5>
                                 </div>
                                 <div className="deal-content">
-                                    <h6 className="product-title"><Link href="shop-product-right.html">هدفون‌های داخل گوش اپل با ریموت و میکروفون</Link ></h6>
+                                    <h6 className="product-title"><Link href="/products/محصول">هدفون‌های داخل گوش اپل با ریموت و میکروفون</Link ></h6>
                                     <div className="product-price"><span className="new-price">۱۷۸,۰۰۰ تومان</span><span className="old-price">۲۵۶.۹۹</span></div>
                                 </div>
                                 <div className="deal-bottom">
@@ -1208,11 +1210,11 @@ function Home() {
                             <div className="product-list-small wow fadeIn animated">
                                 <article className="row align-items-center">
                                     <figure className="col-md-3 mb-0">
-                                        <Link href="shop-product-right.html"><img src="/imgs/shop/thumbnail-3.jpg" alt=""/></Link >
+                                        <Link href="/products/محصول"><img src="/imgs/shop/thumbnail-3.jpg" alt=""/></Link >
                                     </figure>
                                     <div className="col-md-9 pl-0">
                                         <h4 className="title-small">
-                                            <Link href="shop-product-right.html">جهان به ویراستاران متوسط توجه می‌کند</Link >
+                                            <Link href="/products/محصول">جهان به ویراستاران متوسط توجه می‌کند</Link >
                                         </h4>
                                         <div className="product-price">
                                             <span>238,000 تومان</span>
@@ -1222,11 +1224,11 @@ function Home() {
                                 </article>
                                 <article className="row align-items-center">
                                     <figure className="col-md-3 mb-0">
-                                        <Link href="shop-product-right.html"><img src="/imgs/shop/thumbnail-4.jpg" alt=""/></Link >
+                                        <Link href="/products/محصول"><img src="/imgs/shop/thumbnail-4.jpg" alt=""/></Link >
                                     </figure>
                                     <div className="col-md-9 pl-0">
                                         <h4 className="title-small">
-                                            <Link href="shop-product-right.html">جهان به ویراستاران متوسط توجه می‌کند</Link >
+                                            <Link href="/products/محصول">جهان به ویراستاران متوسط توجه می‌کند</Link >
                                         </h4>
                                         <div className="product-price">
                                             <span>238,000 تومان</span>
@@ -1236,11 +1238,11 @@ function Home() {
                                 </article>
                                 <article className="row align-items-center">
                                     <figure className="col-md-3 mb-0">
-                                        <Link href="shop-product-right.html"><img src="/imgs/shop/thumbnail-5.jpg" alt=""/></Link >
+                                        <Link href="/products/محصول"><img src="/imgs/shop/thumbnail-5.jpg" alt=""/></Link >
                                     </figure>
                                     <div className="col-md-9 pl-0">
                                         <h4 className="title-small">
-                                            <Link href="shop-product-right.html">جهان به ویراستاران متوسط توجه می‌کند</Link >
+                                            <Link href="/products/محصول">جهان به ویراستاران متوسط توجه می‌کند</Link >
                                         </h4>
                                         <div className="product-price">
                                             <span>238,000 تومان</span>
@@ -1255,11 +1257,11 @@ function Home() {
                             <div className="product-list-small wow fadeIn animated">
                                 <article className="row align-items-center">
                                     <figure className="col-md-3 mb-0">
-                                        <Link href="shop-product-right.html"><img src="/imgs/shop/thumbnail-6.jpg" alt=""/></Link >
+                                        <Link href="/products/محصول"><img src="/imgs/shop/thumbnail-6.jpg" alt=""/></Link >
                                     </figure>
                                     <div className="col-md-9 pl-0">
                                         <h4 className="title-small">
-                                            <Link href="shop-product-right.html">جهان به ویراستاران متوسط توجه می‌کند</Link >
+                                            <Link href="/products/محصول">جهان به ویراستاران متوسط توجه می‌کند</Link >
                                         </h4>
                                         <div className="product-price">
                                             <span>238,000 تومان</span>
@@ -1269,11 +1271,11 @@ function Home() {
                                 </article>
                                 <article className="row align-items-center">
                                     <figure className="col-md-3 mb-0">
-                                        <Link href="shop-product-right.html"><img src="/imgs/shop/thumbnail-7.jpg" alt=""/></Link >
+                                        <Link href="/products/محصول"><img src="/imgs/shop/thumbnail-7.jpg" alt=""/></Link >
                                     </figure>
                                     <div className="col-md-9 pl-0">
                                         <h4 className="title-small">
-                                            <Link href="shop-product-right.html">جهان به ویراستاران متوسط توجه می‌کند</Link >
+                                            <Link href="/products/محصول">جهان به ویراستاران متوسط توجه می‌کند</Link >
                                         </h4>
                                         <div className="product-price">
                                             <span>238,000 تومان</span>
@@ -1283,11 +1285,11 @@ function Home() {
                                 </article>
                                 <article className="row align-items-center">
                                     <figure className="col-md-3 mb-0">
-                                        <Link href="shop-product-right.html"><img src="/imgs/shop/thumbnail-8.jpg" alt=""/></Link >
+                                        <Link href="/products/محصول"><img src="/imgs/shop/thumbnail-8.jpg" alt=""/></Link >
                                     </figure>
                                     <div className="col-md-9 pl-0">
                                         <h4 className="title-small">
-                                            <Link href="shop-product-right.html">جهان به ویراستاران متوسط توجه می‌کند</Link >
+                                            <Link href="/products/محصول">جهان به ویراستاران متوسط توجه می‌کند</Link >
                                         </h4>
                                         <div className="product-price">
                                             <span>238,000 تومان</span>
@@ -1302,11 +1304,11 @@ function Home() {
                             <div className="product-list-small wow fadeIn animated">
                                 <article className="row align-items-center">
                                     <figure className="col-md-3 mb-0">
-                                        <Link href="shop-product-right.html"><img src="/imgs/shop/thumbnail-9.jpg" alt=""/></Link >
+                                        <Link href="/products/محصول"><img src="/imgs/shop/thumbnail-9.jpg" alt=""/></Link >
                                     </figure>
                                     <div className="col-md-9 pl-0">
                                         <h4 className="title-small">
-                                            <Link href="shop-product-right.html">جهان به ویراستاران متوسط توجه می‌کند</Link >
+                                            <Link href="/products/محصول">جهان به ویراستاران متوسط توجه می‌کند</Link >
                                         </h4>
                                         <div className="product-price">
                                             <span>238,000 تومان</span>
@@ -1316,11 +1318,11 @@ function Home() {
                                 </article>
                                 <article className="row align-items-center">
                                     <figure className="col-md-3 mb-0">
-                                        <Link href="shop-product-right.html"><img src="/imgs/shop/thumbnail-1.jpg" alt=""/></Link >
+                                        <Link href="/products/محصول"><img src="/imgs/shop/thumbnail-1.jpg" alt=""/></Link >
                                     </figure>
                                     <div className="col-md-9 pl-0">
                                         <h4 className="title-small">
-                                            <Link href="shop-product-right.html">جهان به ویراستاران متوسط توجه می‌کند</Link >
+                                            <Link href="/products/محصول">جهان به ویراستاران متوسط توجه می‌کند</Link >
                                         </h4>
                                         <div className="product-price">
                                             <span>238,000 تومان</span>
@@ -1330,11 +1332,11 @@ function Home() {
                                 </article>
                                 <article className="row align-items-center">
                                     <figure className="col-md-3 mb-0">
-                                        <Link href="shop-product-right.html"><img src="/imgs/shop/thumbnail-2.jpg" alt=""/></Link >
+                                        <Link href="/products/محصول"><img src="/imgs/shop/thumbnail-2.jpg" alt=""/></Link >
                                     </figure>
                                     <div className="col-md-9 pl-0">
                                         <h4 className="title-small">
-                                            <Link href="shop-product-right.html">جهان به ویراستاران متوسط توجه می‌کند</Link >
+                                            <Link href="/products/محصول">جهان به ویراستاران متوسط توجه می‌کند</Link >
                                         </h4>
                                         <div className="product-price">
                                             <span>238,000 تومان</span>

@@ -1,8 +1,7 @@
 import AdminCategoriesRow from '@/components/modules/adminCategory/AdminCategoriesRow'
-import Link from 'next/link'
 import React from 'react'
 
-function AdminCategories({categories}) {
+function AdminCategories({categories,setCategories}) {
   return (
     <div className="col-md-9">
     <div className="table-responsive">
@@ -24,7 +23,7 @@ function AdminCategories({categories}) {
             <tbody>
                 {
                     categories.map(cat=>(
-                        <AdminCategoriesRow key={cat.id} {...{category:cat}}/>
+                        <AdminCategoriesRow key={cat.id} {...{category:cat,setCategories}}/>
                     ))
                 }
 

@@ -2,8 +2,11 @@ import Link from 'next/link'
 import React from 'react'
 import SearchBar from '../searchBar/SearchBar'
 import StickyBar from '@/components/modules/stickyBar/StickyBar'
+import CategoriesModel from '@/models/categories/categories'
 
-function Header() {
+async function Header() {
+    const model=new CategoriesModel()
+    // const categories=await model.getAll()
   return (
     <>
     <header className="header-area header-height-2">

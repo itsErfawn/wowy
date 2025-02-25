@@ -55,3 +55,14 @@ export async function GET() {
     return NextResponse.json({categories},{status:200})
 
 }
+export async function DELETE(request) {
+    const {searchParams}=new URL(request.url)
+    const param=searchParams.get('id')
+    const model= new CategoriesModel()
+    const category=await model.delete(param)
+    if(!category){
+        return NextResponse.json({error:"خطا در انجام عملیات"})
+    }
+    
+    return NextResponse.json({success:"دسته بندی با موفقیت حذف شد"})
+}

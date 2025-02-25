@@ -3,7 +3,7 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'
 import PopularCategory from '../popularCategory/PopularCategory';
-function PopularCategories() {
+function PopularCategories({categories}) {
   return (
     <section className="popular-categories bg-grey-9 section-padding-60">
     <div className="container wow fadeIn animated">
@@ -30,39 +30,13 @@ function PopularCategories() {
                 }
             }}
             >
-                <SwiperSlide>
-                    <PopularCategory/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <PopularCategory/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <PopularCategory/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <PopularCategory/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <PopularCategory/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <PopularCategory/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <PopularCategory/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <PopularCategory/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <PopularCategory/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <PopularCategory/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <PopularCategory/>
-                </SwiperSlide>
+                {
+                    categories.map(category=>(
+                        <SwiperSlide key={category.id}>
+                        <PopularCategory key={category.id} {...{category}}/>
+                    </SwiperSlide>
+                    ))
+                }
             </Swiper>
         </div>
     </div>
