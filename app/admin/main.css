@@ -4346,3 +4346,30 @@ body.dark .dropdown-menu .dropdown-item.text-danger {
       transform: rotate(360deg);
   }
   } 
+.brand_modal_wrapper{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, .3);
+  transition: all linear 150ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.brand_modal_wrapper.active{
+  visibility: visible;
+  opacity: 100;
+}
+.modal{
+  top: -100%;
+  display: block;
+}
+.modal.show{
+  top: 0;
+}
+.modal-footer{
+  justify-content: start;
+  flex-direction: row-reverse;
+}

@@ -3,9 +3,8 @@ import Header from "@/components/templates/header/Header";
 import PreLoad from "@/components/templates/preLoad/PreLoad";
 import Script from "next/script";
 import './main.css'
-import adminBootstrap from "@/Bootstrap/admin-bootstrap";
 export default async  function pageLayout({ children }) {
-  await adminBootstrap.validate()
+  
   return (
       <>
       <Header/>

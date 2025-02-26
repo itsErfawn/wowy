@@ -25,33 +25,6 @@ function productPage() {
                                                 <figure className="border-radius-10">
                                                     <img src="/imgs/shop/product-2-1.jpg" alt="تصویر محصول"/>
                                                 </figure>
-                                                <figure className="border-radius-10">
-                                                    <img src="/imgs/shop/product-3-4.jpg" alt="تصویر محصول"/>
-                                                </figure>
-                                                <figure className="border-radius-10">
-                                                    <img src="/imgs/shop/product-4-1.jpg" alt="تصویر محصول"/>
-                                                </figure>
-                                                <figure className="border-radius-10">
-                                                    <img src="/imgs/shop/product-5-1.jpg" alt="تصویر محصول"/>
-                                                </figure>
-                                                <figure className="border-radius-10">
-                                                    <img src="/imgs/shop/product-6-1.jpg" alt="تصویر محصول"/>
-                                                </figure>
-                                                <figure className="border-radius-10">
-                                                    <img src="/imgs/shop/product-7-1.jpg" alt="تصویر محصول"/>
-                                                </figure>
-                                                <figure className="border-radius-10">
-                                                    <img src="/imgs/shop/product-9-1.jpg" alt="تصویر محصول"/>
-                                                </figure>
-                                            </div>
-                                            <div className="slider-nav-thumbnails pl-15 pr-15">
-                                                <div><img src="/imgs/shop/thumbnail-3.jpg" alt="تصویر محصول"/></div>
-                                                <div><img src="/imgs/shop/thumbnail-4.jpg" alt="تصویر محصول"/></div>
-                                                <div><img src="/imgs/shop/thumbnail-5.jpg" alt="تصویر محصول"/></div>
-                                                <div><img src="/imgs/shop/thumbnail-6.jpg" alt="تصویر محصول"/></div>
-                                                <div><img src="/imgs/shop/thumbnail-7.jpg" alt="تصویر محصول"/></div>
-                                                <div><img src="/imgs/shop/thumbnail-8.jpg" alt="تصویر محصول"/></div>
-                                                <div><img src="/imgs/shop/thumbnail-9.jpg" alt="تصویر محصول"/></div>
                                             </div>
                                         </div>
                                     </div>

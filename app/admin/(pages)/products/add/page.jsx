@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 
 function adminAddProductsPage() {
@@ -29,7 +30,7 @@ function adminAddProductsPage() {
                             <textarea placeholder="اینجا تایپ کنید" className="form-control" rows="4"></textarea>
                         </div>
                         <div className="row">
-                            <div className="col-lg-4">
+                            <div className="col-lg-6">
                                 <div className="mb-4">
                                     <label className="form-label">قیمت عادی</label>
                                     <div className="row gx-2">
@@ -37,59 +38,12 @@ function adminAddProductsPage() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-4">
+                            <div className="col-lg-6">
                                 <div className="mb-4">
-                                    <label className="form-label">قیمت تبلیغاتی</label>
+                                    <label className="form-label">قیمت ویژه</label>
                                     <input placeholder="$" type="text" className="form-control"/>
                                 </div>
                             </div>
-                            <div className="col-lg-4">
-                                <label className="form-label">واحد پول</label>
-                                <select className="form-select">
-                                    <option> USD </option>
-                                    <option> EUR </option>
-                                    <option> RUBL </option>
-                                </select>
-                            </div>
-                        </div>
-                        <div className="mb-4">
-                            <label className="form-label">نرخ مالیات</label>
-                            <input type="text" placeholder="%" className="form-control" id="product_name"/>
-                        </div>
-                        <label className="form-check mb-4">
-                            <input className="form-check-input" type="checkbox" value=""/>
-                            <span className="form-check-label"> ایجاد به عنوان قالب </span>
-                        </label>
-                    </form>
-                </div>
-            </div>
-            <div className="card mb-4">
-                <div className="card-header">
-                    <h4>حمل و نقل</h4>
-                </div>
-                <div className="card-body">
-                    <form>
-                        <div className="row">
-                            <div className="col-lg-6">
-                                <div className="mb-4">
-                                    <label htmlFor="product_name" className="form-label">عرض</label>
-                                    <input type="text" placeholder="اینچ" className="form-control" id="product_name"/>
-                                </div>
-                            </div>
-                            <div className="col-lg-6">
-                                <div className="mb-4">
-                                    <label htmlFor="product_name" className="form-label">ارتفاع</label>
-                                    <input type="text" placeholder="اینچ" className="form-control" id="product_name"/>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="mb-4">
-                            <label htmlFor="product_name" className="form-label">وزن</label>
-                            <input type="text" placeholder="گرم" className="form-control" id="product_name"/>
-                        </div>
-                        <div className="mb-4">
-                            <label htmlFor="product_name" className="form-label">هزینه‌های حمل و نقل</label>
-                            <input type="text" placeholder="$" className="form-control" id="product_name"/>
                         </div>
                     </form>
                 </div>
@@ -114,6 +68,14 @@ function adminAddProductsPage() {
                 <div className="card-body">
                     <div className="row gx-2">
                         <div className="col-sm-6 mb-3">
+                            <label className="form-label">وضعیت</label>
+                            <select className="form-select">
+                                <option> فعال</option>
+                                <option>  بایگانی شده </option>
+                                <option>  غیرفعال </option>
+                            </select>
+                        </div>
+                        <div className="col-sm-6 mb-3">
                             <label className="form-label">دسته‌بندی</label>
                             <select className="form-select">
                                 <option> خودروها </option>
@@ -124,18 +86,24 @@ function adminAddProductsPage() {
                                 <option> نوزاد و اسباب‌بازی‌ها </option>
                             </select>
                         </div>
-                        <div className="col-sm-6 mb-3">
-                            <label className="form-label">زیر دسته‌بندی</label>
-                            <select className="form-select">
-                                <option> نیسان </option>
-                                <option> هوندا </option>
-                                <option> مرسدس </option>
-                                <option> شورولت </option>
-                            </select>
+                        <div className="mb-3">
+                            <label className="form-label">موجودی</label>
+                            <input type="text" className="form-control" placeholder='اینجا تایپ کنید' />
                         </div>
                         <div className="mb-4">
                             <label htmlFor="product_name" className="form-label">برچسب‌ها</label>
                             <input type="text" className="form-control"/>
+                        </div>
+                        <div className="mb-3">
+                            <label className="form-label">برند</label>
+                            <select className="form-select">
+                                <option> خودروها </option>
+                                <option> لوازم خانگی </option>
+                                <option> الکترونیک </option>
+                                <option> گوشی‌های هوشمند </option>
+                                <option> لوازم ورزشی </option>
+                                <option> نوزاد و اسباب‌بازی‌ها </option>
+                            </select>
                         </div>
                     </div> 
                 </div>

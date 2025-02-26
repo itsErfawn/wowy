@@ -80,8 +80,9 @@ function AdminCategoryForm({ setCategories, categories }) {
                     <label className="form-label">والد</label>
                     <select className="form-select" name='parent' value={formData.parent || ''} onChange={handleChange}>
                         <option value={0}>بدون والد</option>
-                        <option value={3}>لباس‌ها</option>
-                        <option value={4}>تی‌شرت‌ها</option>
+                        {categories.map(cat=>(
+                            <option value={cat.id} key={cat.id}>{cat.name}</option>
+                        ))}
                     </select>
                 </div>
                 <div className="mb-4">
